@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import Search from "src/shared/components/Search";
 import { StyledHome } from "./WordHome.styled";
 import ApiExplorer from "src/wordio/components/ApiExplorer";
@@ -11,6 +12,9 @@ export default function (props) {
   let that = props.that;
   return (
     <StyledHome>
+      <Head>
+        <title>Wordio.co</title>
+      </Head>
       <Search
         {...that.props}
         className={"Search Word Home"}
